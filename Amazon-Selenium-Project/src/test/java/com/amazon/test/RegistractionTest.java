@@ -20,7 +20,19 @@ public class RegistractionTest  extends baseTest{
 	}
 	@Test
 	public void pageTitleTest() {
-		Assert.assertEquals(registractionpage.getTitle(), "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in","error Title doest not match");
+		Assert.assertEquals(registractionpage.getTitle(), "Amazon Registration","Error-Page Title Does not Match"+registractionpage.getTitle());
+	}
+	
+	
+	@Test
+	public void verfiyMobilenumber() {
+		registractionpage.verifyMobileNumberFunctionality();
+	}
+	
+	@Test
+	public void SignInLinkText() {
+		Assert.assertEquals(signpage.getTitle(), "Amazon Sign In","Error-Page Title Does not Match"+registractionpage.getTitle());
+		registractionpage.clickOnSignIn();
 	}
 
 }
